@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages{
-        stage('pwd command') {
+        stage('git checkout') {
             steps{
                 sh 'pwd'
             }
@@ -26,5 +26,12 @@ pipeline {
                 sh 'whoami'
             }
         }
+        stage('git checkout') {
+            steps{
+                sh 'touch lib'
+            }
+        }
+
+
     }
 }

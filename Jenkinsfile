@@ -16,5 +16,10 @@ pipeline {
                 sh 'echo build'
             }
         }
+        stage('touch') {
+            steps{
+                sh 'touch gigi'
+            }
+        }
     }
 }

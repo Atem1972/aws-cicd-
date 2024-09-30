@@ -26,9 +26,9 @@ pipeline {
                 sh 'whoami'
             }
         }
-        stage('git check') {
+        stage('git checkout') {
             steps{
-                sh 'touch lib'
+                git branch: 'main', url: 'https://github.com/Atem1972/awscicd.git'
             }
         }
 

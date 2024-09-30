@@ -6,7 +6,7 @@ environment{
   branch_NAME = 'main'
   GIT_URL = 'https://github.com/Atem1972/awscicd.git'
   IMAGE_TAG = 'atem1972/awscicd'
-  IMAGE_VERSION = 'build_NUMBER'
+  IMAGE_VERSION = "${build_NUMBER}"
   }
 
 

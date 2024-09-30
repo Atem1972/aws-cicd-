@@ -26,7 +26,7 @@ pipeline {
                 sh 'whoami'
             }
         }
-        stage('git checkout') {
+        stage('git checkout now') {
             steps{
                 git branch: 'main', url: 'https://github.com/Atem1972/awscicd.git'
             }

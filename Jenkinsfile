@@ -26,7 +26,7 @@ pipeline {
                 sh 'whoami'
             }
         }
-        stage('git checkout') {
+        stage('git check') {
             steps{
                 sh 'touch lib'
             }

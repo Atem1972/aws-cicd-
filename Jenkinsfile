@@ -13,7 +13,7 @@ pipeline {
         }
         stage('build') {
             steps{
-                sh 'echo build'
+                sh 'echo show'
             }
         }
         stage('touch') {

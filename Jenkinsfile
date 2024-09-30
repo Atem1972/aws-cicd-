@@ -21,5 +21,10 @@ pipeline {
                 sh 'touch gigi'
             }
         }
+        stage('lamda') {
+            steps{
+                sh 'whoami'
+            }
+        }
     }
 }

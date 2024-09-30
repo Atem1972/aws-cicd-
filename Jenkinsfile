@@ -1,5 +1,19 @@
 pipeline {
     agent any
+
+
+environment{    #declearing variable
+  branch_NAME = 'main'
+  GIT_URL = 'https://github.com/Atem1972/awscicd.git'
+}
+
+
+
+
+
+
+
+
     stages{
         stage('git checkout') {
             steps{
@@ -21,14 +35,15 @@ pipeline {
                 sh 'touch gigi'
             }
         }
-        stage('lamda') {
+        stage('docker build') {
             steps{
-                sh 'whoami'
+                sh 'docke build -t awscicd .'
+                sh 'docker images'
             }
         }
-        stage('git checkout now') {
+        stage('git checkout now') {   # THIS IS IMPORTANT IN A REPO THAT HAS MANY BRANCHES
             steps{
-                git branch: 'main', url: 'https://github.com/Atem1972/awscicd.git'
+                git branch: "${BRANCH_NAME}", url: "${GIT_URL}"
             }
         }
 

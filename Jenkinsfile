@@ -41,7 +41,7 @@ environment{
                 sh 'docker images'
             }
         }
-        stage('git checkout now') {   # THIS IS IMPORTANT IN A REPO THAT HAS MANY BRANCHES
+        stage('git checkout now') {   
             steps{
                 git branch: "${BRANCH_NAME}", url: "${GIT_URL}"
             }

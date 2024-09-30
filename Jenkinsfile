@@ -2,7 +2,7 @@ pipeline {
     agent any
 
 
-environment{    #declearing variable
+environment{    
   branch_NAME = 'main'
   GIT_URL = 'https://github.com/Atem1972/awscicd.git'
 }
